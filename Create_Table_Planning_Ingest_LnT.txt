@@ -1,22 +1,23 @@
 create table TB_Planning_Ingest_Staging_LNT
 (
 WBS_element	NVARCHAR(40) NOT NULL,
-Priority NVARCHAR(40) NOT NULL,
+[Priority] NVARCHAR(40) NOT NULL,
 Activity_ID	INT NOT NULL,
 Activity_Name	NVARCHAR(40) NOT NULL,
 Planned_Start	NVARCHAR(40) NULL,
 Planned_Finish  NVARCHAR(40) NULL,	
-Actual_Start	NVARCHAR(40) NULL
-Actual_Finish	NVARCHAR(40) NULL
-Original_Duration	NVARCHAR(40) NULL
-Remaining_Duration	NVARCHAR(40) NULL
-Resources	NVARCHAR(40) NULL
+Actual_Start	NVARCHAR(40) NULL,
+Actual_Finish	NVARCHAR(40) NULL,
+Original_Duration	NVARCHAR(40) NULL,
+Remaining_Duration	NVARCHAR(40) NULL,
+Resources	NVARCHAR(40) NULL,
 Labour_Units	DECIMAL(10,2) NULL,
 Earned_Labour_units	DECIMAL(10,2) NULL,
 Remaining_Labour_units	DECIMAL(10,2) NULL,
-%_Complete	NVARCHAR(7) NULL,
-previous_%_complete NVARCHAR(7) NULL,	
-%_delta	Comments	NVARCHAR(7) NULL,
+[%_Complete]	NVARCHAR(7) NULL,
+[previous_%_complete] NVARCHAR(7) NULL,	
+[%_delta]	NVARCHAR(7) NULL,
+Comments NVARCHAR(7) NULL,
 Text_1	NVARCHAR(7) NULL,
 Text_2	NVARCHAR(7) NULL,
 Text_3	NVARCHAR(7) NULL,
@@ -32,9 +33,6 @@ Digit_2	NVARCHAR(7) NULL,
 Digit_3	NVARCHAR(7) NULL,
 Digit_4	NVARCHAR(7) NULL,
 Digit_5	NVARCHAR(7) NULL,
-Load_date DATETIME DEFAULT GETDATE()
+Load_date DATETIME DEFAULT GETDATE(),
 Vendor_Name NVARCHAR(20) DEFAULT 'LNT'
-);
-
-
-
+)
